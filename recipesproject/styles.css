@@ -1,0 +1,23 @@
+body {
+    font-family: 'Canela Trial', Georgia, 'Times New Roman', Times, serif;
+    margin: 40px;
+}
+
+.header {
+    display: flex;
+}
+
+.description {
+    padding: 15px;
+}
+
+.hero {
+    width: 30%;
+    border-radius: 30px;
+    margin: 40px;
+    flex: 1
+}
+
+* {
+    border: 2px solid red
+}
