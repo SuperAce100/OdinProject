@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="./scripts.js"></script>
+
+        <meta charset="UTF-8">
+        <title>Zen Paint</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="utils/normalize.css">
+        <script src="https://kit.fontawesome.com/801c9e9135.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+<body>
+    <h1>Zen Paint</h1>
+    
+    <div class="container">
+        <div class="leftcolumn">
+            <div class="toolbar">
+                <button id="pen" onclick="setPenMode()"><i class="fas fa-paint-brush" style="color: #ffffff;"></i>Paintbrush<input type="color" id="colorpicker"></button>
+                <button id="eraser" onclick="setEraserMode()"><i class="fas fa-eraser" style="color: #ffffff;"></i>Eraser</button>
+                <button id="shading" onclick="setShadingMode()"><i class="fas fa-spray-can" style="color: #ffffff;"></i>Airbrush<input type="color" id="airbrushcolorpicker"></button>
+                <button id="rainbow" onclick="setRainbowMode()"><i class="fas fa-rainbow" style="color: #ffffff;"></i>Rainbow</button>
+                <div class="size-adjust">
+                    <div class="label">
+                        <h2>Adjust Size</h2> <p id="size-display"></p>
+                    </div>
+                    <div class="slidecontainer">
+                        <input type="range" min="4" max="48" value="16" class="slider" id="slider">
+                    </div>
+                </div>
+                <button id="gridlines" onclick="toggleGridLines()"><i class="fas fa-border-none" style="color: #ffffff;"></i>Toggle Grid Lines</button>
+            </div>
+            <button id="clear" onclick="clearGrid()" class="clear-button"><i class="fas fa-trash" style="color: #ffffff;"></i>Clear</button>
+        </div>
+        <div class="grid" id="grid"></div>
+    </div>
+</body>
+</html>
