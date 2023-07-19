@@ -1,24 +1,85 @@
 body {
-    font-family: Inter, Helvetica, sans-serif;
+  font-family: Victor Mono, "Courier New", Courier, monospace;
+  background-image: url(https://images.unsplash.com/photo-1614851099511-773084f6911d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80);
+  background-size: cover;
+  color: white;
 }
 
 .calculator {
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    width: 500px;
-    background-color: #ffe3e0;
-    border: 2px solid #364959;
-    border-radius: 30px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 20px;
-    border: 2px solid #364959;
-    background-color: #fbc3bc;
-    margin: 10px;
-    border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 20px;
+  background-color: #161f27;
+  border: none;
+  border-radius: 5px;
+  flex-grow: 1;
+  color: white;
+  flex: 1;
+  transition: 0.5s;
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+button:hover {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.23);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.top {
+  flex: 2;
+}
+
+.operation {
+  height: 1px;
+  font-size: 18px;
+  margin-top: 0;
+  text-align: right;
+  color: lightgrey;
+}
+
+.result {
+  height: 1px;
+  font-size: 48px;
+  margin-top: 0;
+  padding: 5px;
+  text-align: right;
+}
+
+.display {
+  border: none;
+  padding: 10px;
+  /* background-color: #253441; */
+  border-radius: 5px;
 }
