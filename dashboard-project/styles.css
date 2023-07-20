@@ -1,0 +1,297 @@
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background-color: #161f27;
+  color: white;
+}
+
+.body {
+  display: flex;
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+  width: 350px;
+}
+
+.nav img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  padding-left: 20px;
+  border: none;
+  font-size: 18px;
+  border-radius: 0px 10px 10px 0px;
+  transition: 0.2s;
+}
+
+.nav-item i {
+  padding-right: 10px;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-item:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header {
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.header-row {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pfp {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.smallpfp {
+  height: 50px;
+  width: 50px;
+}
+
+.largepfp {
+  height: 80px;
+  width: 80px;
+}
+
+.search {
+  width: 100%;
+}
+
+.icon {
+  padding: 20px;
+  min-width: 50px;
+}
+
+.search i {
+  position: absolute;
+}
+
+input {
+  padding: 20px;
+  padding-left: 52px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.3s;
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+input:focus {
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#search {
+  flex-grow: 1;
+}
+
+.notification {
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 15px;
+  transition: 0.3s;
+  height: 24px;
+  width: 24px;
+  margin: auto;
+  text-align: center;
+}
+
+.notification:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.notification:active {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0s;
+}
+
+.header h2 {
+  margin-top: 0;
+}
+
+.header p {
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+button {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+button:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.header button {
+  font-size: 24px;
+  width: 80px;
+  height: 80px;
+}
+
+.content-body {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  flex-grow: 1;
+  height: 500px;
+}
+
+.left-column {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.left-column > div {
+  flex: 1;
+  min-height: 0;
+}
+
+.right-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.right-column > div {
+  flex: 1;
+  min-height: 0;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+
+.container {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  padding-top: 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > div {
+  overflow: scroll;
+}
+
+.trending-item {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.trending-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.trending-item h5 {
+  margin-top: 10px;
+
+  font-size: 16px;
+}
+
+.trending-item p {
+  margin-top: 1px;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  overflow: scroll;
+  min-height: 0;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card > img {
+  width: 100%;
+  box-sizing: border-box;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card > button {
+  border-radius: 6px;
+}
+
+.card > h2 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: end;
+  height: 100%;
+  box-sizing: border-box;
+}
