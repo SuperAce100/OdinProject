@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../utils/normalize.css" />
+    <script src="https://kit.fontawesome.com/801c9e9135.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic-Tac-Toe</h1>
+      <div class="row">
+        <div class="player" id="player1"><i class="fas fa-times"></i>Player 1</div>
+        <div class="player" id="player2"><i class="far fa-circle"></i>Player 2</div>
+      </div>
+      <div class="content" id="content"></div>
+    </div>
+
+    <div class="form-popup" id="playerForm">
+      <form class="form-container card">
+        <h2>Select Your Players</h2>
+
+        <div class="form-row">
+          <div class="form-column">
+            <div>
+              <label for="player1name"><b>Player 1</b></label>
+              <input type="text" placeholder="Enter Name" id="player1name" required />
+            </div>
+            <div>
+              <label for="icons">Choose an Icon:</label>
+              <select id="player1icons">
+                <option value="x">X <i class="fas fa-times"></i></option>
+                <option value="o">O <i class="far fa-circle"></i></option>
+                <option value="star">Star <i class="fas fa-star"></i></option>
+                <option value="gear">Gear <i class="fas fa-cog"></i></option>
+                <option value="ghost">Ghost <i class="fas fa-ghost"></i></option>
+                <option value="heart">Heart <i class="fas fa-heart"></i></option>
+                <option value="skull">Skull <i class="fas fa-skull"></i></option>
+                <option value="diamond">Diamond <i class="fas fa-gem"></i></option>
+                <option value="music">Music <i class="fas fa-music"></i></option>
+                <option value="sun">Sun <i class="fas fa-sun"></i></option>
+                <option value="moon">Moon <i class="fas fa-moon"></i></option>
+                <option value="rocket">Rocket <i class="fas fa-rocket"></i></option>
+                <option value="leaf">Leaf <i class="fas fa-leaf"></i></option>
+                <option value="cloud">Cloud <i class="fas fa-cloud"></i></option>
+                <option value="book">Book <i class="fas fa-book"></i></option>
+                <option value="pencil">Pencil <i class="fas fa-pencil"></i></option>
+                <option value="globe">Globe <i class="fas fa-globe"></i></option>
+                <option value="star">Star <i class="fas fa-star"></i></option>
+                <option value="trophy">Trophy <i class="fas fa-trophy"></i></option>
+                <option value="camera">Camera <i class="fas fa-camera"></i></option>
+                <option value="paintBrush">Paint Brush <i class="fas fa-paint-brush"></i></option>
+                <option value="guitar">Guitar <i class="fas fa-guitar"></i></option>
+                <option value="car">Car <i class="fas fa-car"></i></option>
+                <option value="coffee">Coffee <i class="fas fa-coffee"></i></option>
+                <option value="pizza">Pizza <i class="fas fa-pizza-slice"></i></option>
+                <option value="football">Football <i class="fas fa-football-ball"></i></option>
+                <option value="bell">Bell <i class="fas fa-bell"></i></option>
+                <option value="bomb">Bomb <i class="fas fa-bomb"></i></option>
+                <option value="tree">Tree <i class="fas fa-tree"></i></option>
+                <option value="smile">Smile <i class="fas fa-smile"></i></option>
+                <option value="frown">Frown <i class="fas fa-frown"></i></option>
+                <option value="magnet">Magnet <i class="fas fa-magnet"></i></option>
+                <option value="plane">Plane <i class="fas fa-plane"></i></option>
+                <option value="train">Train <i class="fas fa-train"></i></option>
+                <option value="umbrella">Umbrella <i class="fas fa-umbrella"></i></option>
+                <option value="clock">Clock <i class="fas fa-clock"></i></option>
+                <option value="fire">Fire <i class="fas fa-fire"></i></option>
+                <option value="water">Water <i class="fas fa-water"></i></option>
+                <option value="paw">Paw <i class="fas fa-paw"></i></option>
+                <option value="key">Key <i class="fas fa-key"></i></option>
+                <option value="gamepad">Gamepad <i class="fas fa-gamepad"></i></option>
+                <option value="ship">Ship <i class="fas fa-ship"></i></option>
+                <option value="diamond">Diamond <i class="fas fa-diamond"></i></option>
+                <option value="spider">Spider <i class="fas fa-spider"></i></option>
+                <option value="cookie">Cookie <i class="fas fa-cookie-bite"></i></option>
+                <option value="crown">Crown <i class="fas fa-crown"></i></option>
+                <option value="sword">Sword <i class="fas fa-sword"></i></option>
+                <option value="shield">Shield <i class="fas fa-shield-alt"></i></option>
+                <option value="robot">Robot <i class="fas fa-robot"></i></option>
+                <option value="alien">Alien <i class="fas fa-reddit-alien"></i></option>
+                <option value="angel">Angel <i class="fas fa-angel"></i></option>
+              </select>
+            </div>
+          </div>
+          <div class="form-column">
+            <div>
+              <label for="player2name"><b>Player 2</b></label>
+              <input type="text" placeholder="Enter Name" id="player2name" required />
+            </div>
+
+            <div>
+              <label for="icons">Choose an Icon:</label>
+              <select id="player2icons">
+                <option value="x">X <i class="fas fa-times"></i></option>
+                <option value="o">O <i class="far fa-circle"></i></option>
+                <option value="star">Star <i class="fas fa-star"></i></option>
+                <option value="gear">Gear <i class="fas fa-cog"></i></option>
+                <option value="ghost">Ghost <i class="fas fa-ghost"></i></option>
+                <option value="heart">Heart <i class="fas fa-heart"></i></option>
+                <option value="skull">Skull <i class="fas fa-skull"></i></option>
+                <option value="diamond">Diamond <i class="fas fa-gem"></i></option>
+                <option value="music">Music <i class="fas fa-music"></i></option>
+                <option value="sun">Sun <i class="fas fa-sun"></i></option>
+                <option value="moon">Moon <i class="fas fa-moon"></i></option>
+                <option value="rocket">Rocket <i class="fas fa-rocket"></i></option>
+                <option value="leaf">Leaf <i class="fas fa-leaf"></i></option>
+                <option value="cloud">Cloud <i class="fas fa-cloud"></i></option>
+                <option value="book">Book <i class="fas fa-book"></i></option>
+                <option value="pencil">Pencil <i class="fas fa-pencil"></i></option>
+                <option value="globe">Globe <i class="fas fa-globe"></i></option>
+                <option value="star">Star <i class="fas fa-star"></i></option>
+                <option value="trophy">Trophy <i class="fas fa-trophy"></i></option>
+                <option value="camera">Camera <i class="fas fa-camera"></i></option>
+                <option value="paintBrush">Paint Brush <i class="fas fa-paint-brush"></i></option>
+                <option value="guitar">Guitar <i class="fas fa-guitar"></i></option>
+                <option value="car">Car <i class="fas fa-car"></i></option>
+                <option value="coffee">Coffee <i class="fas fa-coffee"></i></option>
+                <option value="pizza">Pizza <i class="fas fa-pizza-slice"></i></option>
+                <option value="football">Football <i class="fas fa-football-ball"></i></option>
+                <option value="bell">Bell <i class="fas fa-bell"></i></option>
+                <option value="bomb">Bomb <i class="fas fa-bomb"></i></option>
+                <option value="tree">Tree <i class="fas fa-tree"></i></option>
+                <option value="smile">Smile <i class="fas fa-smile"></i></option>
+                <option value="frown">Frown <i class="fas fa-frown"></i></option>
+                <option value="magnet">Magnet <i class="fas fa-magnet"></i></option>
+                <option value="plane">Plane <i class="fas fa-plane"></i></option>
+                <option value="train">Train <i class="fas fa-train"></i></option>
+                <option value="umbrella">Umbrella <i class="fas fa-umbrella"></i></option>
+                <option value="clock">Clock <i class="fas fa-clock"></i></option>
+                <option value="fire">Fire <i class="fas fa-fire"></i></option>
+                <option value="water">Water <i class="fas fa-water"></i></option>
+                <option value="paw">Paw <i class="fas fa-paw"></i></option>
+                <option value="key">Key <i class="fas fa-key"></i></option>
+                <option value="gamepad">Gamepad <i class="fas fa-gamepad"></i></option>
+                <option value="ship">Ship <i class="fas fa-ship"></i></option>
+                <option value="diamond">Diamond <i class="fas fa-diamond"></i></option>
+                <option value="spider">Spider <i class="fas fa-spider"></i></option>
+                <option value="cookie">Cookie <i class="fas fa-cookie-bite"></i></option>
+                <option value="crown">Crown <i class="fas fa-crown"></i></option>
+                <option value="sword">Sword <i class="fas fa-sword"></i></option>
+                <option value="shield">Shield <i class="fas fa-shield-alt"></i></option>
+                <option value="robot">Robot <i class="fas fa-robot"></i></option>
+                <option value="alien">Alien <i class="fas fa-reddit-alien"></i></option>
+                <option value="angel">Angel <i class="fas fa-angel"></i></option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="submitButtons">
+          <button type="button" class="button-6" onclick="configurePlayers()">Start Game!</button>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="./scripts.js"></script>
+</html>
